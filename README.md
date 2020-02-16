@@ -11,6 +11,6 @@ Rocket chip project implements plenty of performance counter that might be helpf
 
 ## Why I always get 0?
 
-Rocket chip does not enable HPM counters by default. To enable them, you need to set ``` RocketCoreParams.nPerfCounters ``` to the value you need.
+Rocket chip does not enable HPM counters by default. To enable them, you need to set ``` RocketCoreParams.nPerfCounters ``` at [here](https://github.com/chipsalliance/rocket-chip/blob/master/src/main/scala/rocket/RocketCore.scala) to the value you need.
     
 
