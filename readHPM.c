@@ -159,7 +159,6 @@ void readCSR(enum State hpm_current_state) {
 void printCSR() {
     printf("CSR state:\n");
     for (int i = 0; i < NUM_COUNTERS; i++) {
-        /* code */
         printf("[%s] %ld\n", desc[i], hpm_snapshot[i]);
     }
 }
@@ -170,26 +169,19 @@ void printCSR() {
 
 
 
-//
-// int main() {
-//     printf("Start\n");
-//
-//
-//     setupCSR();
-//
-//     // readCNTEN();
-//
-//     readCSR(INIT);
-//
-//     // do something
-//
-//     int results_data[DATA_SIZE];
-//
-//     vvadd( DATA_SIZE, input1_data, input2_data, results_data );
-//
-//
-//     readCSR(FINAL);
-//     printf("Final read complete\nValue:\n");
-//     printCSR();
-//
-// }
+
+int main() {
+    printf("Start\n");
+
+
+    setupCSR();
+
+    readCSR(INIT);
+
+    // do something
+
+    readCSR(FINAL);
+    printf("Final read complete\nValue:\n");
+    printCSR();
+
+}
